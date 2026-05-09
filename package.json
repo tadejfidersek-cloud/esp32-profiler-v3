@@ -1,0 +1,33 @@
+{
+  "name": "esp32-board-profiler",
+  "displayName": "ESP32 Board Profiler v3",
+  "version": "3.0.0",
+  "publisher": "local",
+  "engines": { "vscode": "^1.85.0" },
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "esp32Profiler", "title": "ESP32" }
+      ]
+    },
+    "views": {
+      "esp32Profiler": [
+        { "id": "esp32Sidebar", "name": "Profiler" }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc",
+    "package": "npx vsce package"
+  },
+  "dependencies": {
+    "serialport": "^12.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "@vscode/vsce": "^2.15.0"
+  }
+}
